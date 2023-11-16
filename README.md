@@ -1,5 +1,5 @@
 # Coursework-Part2-3D-from-stereo
 
-Python code for Part 2 of the coursework assignment on 3D from stereo. Details on how to run the code are below.
+Python code for Part 2 of the coursework assignment on 3D from stereo. 
 
-The code is derived from that used in the two lab classes on stereo. As in Lab 5 and 6, download the repository and try v1 and v2. If neither work, contact a TA.
+This part of the assignment assumes that you have completed the Stereo Lab Sheets. The assignment involves determining corresponding spheres in two views of a scene consisting of spheres on a plane and using the correspondences to reconstruct the spheres and their centre points. You are required to submit your code and a report that describes and explains the tasks completed, your experiments and the results obtained. Both the code and the report are required to obtain marks.
