@@ -124,12 +124,16 @@ if __name__ == '__main__':
         RGB_list.append([0., 0.5, 0.5])
 
         # create random sphere location
-        step = random.randrange(args.sph_sep_min,args.sph_sep_max,1)
-        x = random.randrange(-h/2+2, h/2-2, step)
-        z = random.randrange(-w/2+2, w/2-2, step)
+        step = random.randrange(int(args.sph_sep_min),int(args.sph_sep_max),1)
+	hstart=int(-h/2+2)
+	hend=int(h/2-2)
+	wstart=int(-w/2+2)
+	wend=int(-w/2+2)
+        x = random.randrange(hstart, hend, step)
+        z = random.randrange(wstart, wend, step)
         while check_dup_locations(x, z, prev_loc):
-            x = random.randrange(-h/2+2, h/2-2, step)
-            z = random.randrange(-w/2+2, w/2-2, step)
+            x = random.randrange(hstart, hend, step)
+            z = random.randrange(wstart, wend, step)
         prev_loc.append((x, z))
 
         GT_cents.append(np.array([x, size, z, 1.]))
