@@ -128,7 +128,7 @@ if __name__ == '__main__':
 	hstart=int(-h/2+2)
 	hend=int(h/2-2)
 	wstart=int(-w/2+2)
-	wend=int(-w/2+2)
+	wend=int(w/2-2)
         x = random.randrange(hstart, hend, step)
         z = random.randrange(wstart, wend, step)
         while check_dup_locations(x, z, prev_loc):
@@ -230,7 +230,7 @@ if __name__ == '__main__':
     ctr = vis.get_view_control()
     for (H_wc, name, dname) in render_list:
         cam.extrinsic = H_wc
-        ctr.convert_from_pinhole_camera_parameters(cam)
+        ctr.convert_from_pinhole_camera_parameters(cam, True)
         vis.poll_events()
         vis.update_renderer()
         vis.capture_screen_image(name, True)
